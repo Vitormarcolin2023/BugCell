@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciador de Modelos</title>
+  </head>
+  <body>
+    <h2>Gerenciador de Modelos</h2>
+    <form method="POST" action="consulta.php">
+      <div class="form-group">
+        <label for="nomeModelo">Nome do Modelo:</label>
+        <input
+          type="text"
+          id="nomeModelo"
+          name="novoNome"
+          value="<?php echo $nomeModelo; ?>"
+        />
+      </div>
+      <button type="submit">Salvar</button>
+    </form>
+  </body>
+</html>

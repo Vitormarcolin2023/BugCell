@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação de Produto</title>
+    <style>
+        body {
+          background: #da7070;
+          overflow: hidden;
+        }
+
+
+        /* Estilos para o cabeçalho */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Estilos para a classe .descricao */
+        .descricao {
+            flex-grow: 1;               /* Adicione esta propriedade para permitir que a div .descricao cresça e ocupe o espaço restante */
+            padding-left: 20px;
+            background-color: #8a0e488f;
+            display: flex;              /* Adicione esta propriedade para tornar os elementos filhos flexíveis */
+            flex-direction: column;     /* Adicione esta propriedade para empilhar os elementos filhos verticalmente */
+            float: left;
+            width:50%; /* Defina a largura da div de descrição para ocupar 30% do espaço */
+            height: 360px;
+            padding-left: 20px;
+            border: 5px solid #000;
+        }
+
+        .descricao h1 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        .descricao p {
+            font-size: 16px;
+            margin-top: 10px;
+            color: #fff; /* Adicione essa propriedade para tornar o texto visível na cor de fundo */
+        }
+
+        /* Estilos para o texto acima da descrição */
+        .plano-descricao {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Estilos para o rodapé */
+        footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+        }
+
+    .slider {
+  float: left;
+  width: 45%; /* Reduzindo a largura da seção do slider para dar espaço à descrição */
+  height: 370px;
+  position: relative;
+  background: #5c6163;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.slider img {
+  height: auto;
+  width: auto;
+  border: 5px solid #000;
+  object-fit: cover;
+  position: relative;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation: fade 1s;
+}
+.slider .seta {
+  z-index: 10;
+  position: relative;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: auto;
+  width: auto;
+  height: 10.5rem;
+  font-size: 2.5em;
+  color: rgb(201, 183, 112);
+  opacity: 0.5;
+  transition: opacity 1s;
+}
+.slider .seta:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.slider .arrow-left {
+  left: 2%;
+}
+.slider .arrow-right {
+  right: 2%;
+}
+.slider .paginacao {
+  position: absolute;
+  margin: auto;
+  top: auto;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  width: 7rem;
+  height: auto;
+  z-index: 5;
+}
+.slider .paginacao .botao {
+	width: auto;
+	height: auto;
+	display: inline-flex;
+	align-content: center;
+	justify-content: center;
+	color: #fff;
+}
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* INICIO código Botão OBTER */
+.container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  left: 30%;
+  top: 210px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+
+.center {
+  width: 180px;
+  height: 60px;
+  position: absolute;
+}
+
+.btn {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: #39a55d;  /* Cor Botão */
+  border: 1px solid rgb(255, 0, 0); /* Cor contorno do Botão */
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #7700ff;   /* Cor do risco que faz efeito HOVER */
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  background: #4e0202; /* Cor da transição do botão ao passar o mouse em cima */
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn span {
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+  font-weight: 100;
+}
+/* FIM código Botão OBTER */
+.container2 {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  left: 80%;
+  top: -190px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+
+.btn2 {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: #2b6891;  /* Cor Botão */
+  border: 1px solid rgb(76, 0, 255); /* Cor contorno do Botão */
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+.btn2:hover {
+  transition: 1s ease-in-out;
+  background: #83aeff; /* Cor da transição do botão ao passar o mouse em cima */
+}
+
+.btn2:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn2 span {
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+  font-weight: 100;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BugCell</h1>
+    </header>
+
+    <section class="slider">
+
+        <div class="seta arrow-left"><i class="fas fa-chevron-circle-left"></i></div>
+          <img src="iphone.jpeg" alt="iPhone Modelo 1" style="height: 300px;">
+          <img src="iphone2.jpeg" alt="iPhone Modelo 2" style="height: 300px;">
+          <img src="iphone3.jpeg" alt="iPhone Modelo 3" style="height: 300px;">
+        <div class="seta arrow-right"><i class="fas fa-chevron-circle-right"></i></div>
+        <div class="paginacao">
+      
+          <div class="botao"> <i class="far fa-circle"></i> </div>
+          <div class="botao"> <i class="far fa-circle"></i> </div>
+          <div class="botao"> <i class="far fa-circle"></i> </div>
+      
+        </div>
+      
+      </section><!--slider-->
+
+        <div class="descricao">
+            <h1>Apple iPhone 13 Pro Max</h1>
+            <p>O iPhone 13 Pro Max é a maior versão do celular da Apple anunciado em 2021. 
+                Entre os diferenciais em relação ao seu “irmão menor”, 
+                o aparelho possui tela maior e mais bateria que podem fazer sentido para quem está 
+                em busca de opções interessantes.</p>
+
+            <p>Dimensões: 16,8 x 7,8 x 0,77 cm; Peso: 240 gramas.</p>
+
+            <p>A tela do iPhone 13 Pro Max conta com vidro Gorilla Glass e o seu painel é um Super Retina 
+                XDR OLED de 6,7 polegadas. Uma vantagem desse modelo é que ele tem a tecnologia 
+                ProMotion que permite o uso da frequência com variações automáticas entre 10 Hz e 120 Hz, 
+                dependendo do tipo de app em uso.</p>
+
+            <p>6 GB de memória RAM;</p>
+            <p>128 GB de armazenamento interno, Entretanto, a Apple disponibiliza versões com 256 GB, 512 GB e 1 TB;</p>
+        </div>
+    </div>
+
+    <div class="container">
+      <div class="center">
+        <button class="btn">
+          <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+            <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+            <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+          </svg>
+          <span> OBTER </span> <!-- Escrita do Botão -->
+        </button>
+      </div>
+    </div>
+
+    <div class="container2">
+      <div class="center">
+        <button class="btn2">
+          <svg width="180px" height="60px" viewBox="0 0 180 60" class="svg2">
+            <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line2" />
+            <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line2" />
+          </svg>
+          <span> Informações sobre o plano </span> <!-- Escrita do Botão -->
+        </button>
+      </div>
+    </div>
+
+    <footer>
+        <p>Informações para contato</p>
+    </footer>
+</body>
+
+
+<script>
+
+const imgs = document.querySelectorAll(".slider img");
+const dots = document.querySelectorAll(".botao i");
+const leftArrow = document.querySelector(".arrow-left");
+const rightArrow = document.querySelector(".arrow-right");
+let currentIndex = 0;
+let time = 7000; //Tempo padrão para apresentação de slides automática
+const defClass = (startPos, index) => {
+  for (let i = startPos; i < imgs.length; i++) {
+    imgs[i].style.display = "none";
+    dots[i].classList.remove("fa-dot-circle");
+    dots[i].classList.add("fa-circle");
+  }
+  imgs[index].style.display = "block";
+  dots[index].classList.add("fa-dot-circle");
+};
+defClass(1, 0);
+leftArrow.addEventListener("click", function(){
+  currentIndex <= 0 ? currentIndex = imgs.length-1 : currentIndex--;
+  defClass(0, currentIndex);
+});
+rightArrow.addEventListener("click", function(){
+  currentIndex >= imgs.length-1 ? currentIndex = 0 : currentIndex++;
+  defClass(0, currentIndex);
+});
+const startAutoSlide = () => {
+  setInterval(() => {
+    currentIndex >= imgs.length-1 ? currentIndex = 0 : currentIndex++;
+    defClass(0, currentIndex);
+  }, time);
+};
+startAutoSlide(); //Inicia o slideshow
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.querySelector(".btn");
+
+  btn.addEventListener("click", function () {
+    // Redirecionar para a página "pagamento-PAYPAL.html"
+    window.location.href = "pagamento-PAYPAL.html";
+  });
+});
+
+</script>
+</html>

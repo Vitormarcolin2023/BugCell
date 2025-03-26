@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BugCell</title>
+    <link rel="stylesheet" href="../css/stylelogin.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header></header>
+    <main>
+      <div class="container">
+        <div class="header">
+          <h2>Login</h2>
+          <a href="../telas/cadastro.html"> Criar conta </a>
+        </div>
+
+        <form
+          id="form_login"
+          class="form"
+          action="../php/login.php"
+          method="post"
+        >
+          <div class="form-control">
+            <label for="cpf">CPF</label>
+            <input
+              type="text"
+              id="cpf"
+              name="login"
+              autocomplete="off"
+              maxlength="14"
+              placeholder="Digite sua CPF"
+              required
+              name="cpf"
+            />
+          </div>
+
+          <div class="form-control">
+            <label for="password">Senha</label>
+            <input
+              type="password"
+              id="password"
+              name="senha"
+              placeholder="Digite sua senha"
+              required
+            />
+          </div>
+          <br />
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </main>
+    <script src="../js/scriptslogin.js"></script>
+  </body>
+</html>

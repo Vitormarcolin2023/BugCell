@@ -1,0 +1,7 @@
+.fundo {
+  height: 100px;
+  width: 100px;
+  background-image: url("samsung.jpg");
+  border: 2px;
+  background-color: #c92d2d9c;
+}
